@@ -28,14 +28,16 @@ public class MainActivity extends AppCompatActivity {
         rtbvotacao.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                if(rating == 1)
+                if(rating <= 1.9)
                     txtstatus.setText("Status: Regular");
-                else if(rating == 2)
+                else if(rating <= 2.9)
                     txtstatus.setText("Status: Bom");
-                else if(rating <= 3)
+                else if(rating <= 3.9)
                     txtstatus.setText("Status: Ótimo");
-                else if(rating == 4)
+                else if(rating <= 4.9)
                     txtstatus.setText("Status: Excelente");
+                else if(rating == 5)
+                    txtstatus.setText("Status: Espetacular");
             }
         });
 
